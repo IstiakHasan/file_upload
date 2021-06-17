@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>File Upload</title>
+    <style>
+        body {
+
+            text-align: center;
+            margin: 100px;
+            background: border-box;
+            padding: 40px;
+        }
+
+    </style>
+
 </head>
+
 <body>
-  
-  
-  
-  <form action="" method="post" enctype="multipart/form-data">
-      
-      <input type="file" name="myfile">
-      <button type="submit" name="submit">UPLOAD</button>
-      
-      
-  </form>
-  
-  
-  
-  <?php
+
+
+
+    <form action="" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="myfile">
+        <button type="submit" name="submit">UPLOAD</button>
+
+
+    </form>
+
+
+
+    <?php
     if(isset($_POST['submit'])){
       $filename=$_FILES['myfile']['name'];
       $filetype=$_FILES['myfile']['type'];
@@ -58,8 +71,9 @@
     }
     
     ?>
-   
-   
-    
+
+
+
 </body>
+
 </html>
